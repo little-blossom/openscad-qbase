@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+TARGET_SCRIPT="openscad-unit/test"
+
+if [ ! -e "$TARGET_SCRIPT" ]
+then
+    cat <<EOF
+'$TARGET_SCRIPT' does not exist.
+
+This is probably because you cloned without initializing the submodules.
+EOF
+    read -e -r -p "Should I try initializing the submodules? (y/N)" RESPONSE
+    if [ "$RESPONSE" != "y" ]
+    then
+        exit 1
+    fi
+
+    git submodule update --init
+
+    if [ ! -e "$TARGET_SCRIPT" ]
+    then
+        echo "Submodules got initialized, but there is still no '$TARGET_SCRIPT'"
+    fi
+fi
+
+exec "$TARGET_SCRIPT" "$@"

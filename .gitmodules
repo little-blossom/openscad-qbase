@@ -1,3 +1,6 @@
 [submodule "openscad-linter"]
 	path = openscad-linter
 	url = https://github.com/little-blossom/openscad-linter
+[submodule "openscad-unit"]
+	path = openscad-unit
+	url = https://github.com/little-blossom/openscad-unit
