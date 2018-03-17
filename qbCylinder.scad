@@ -1,22 +1,37 @@
-module qbCylinder(r=1, h=1, a = 360) {
+use <functions.scad>
+use <qbFilletCircle.scad>
+
+module qbCylinder(r=1, h=1, a = 360, filletTopR=undef, filletBottomR=undef, filletR=undef) {
   a = (a > 360) ? 360 : ((a < 0) ? 0 : a);
 
-  if (a < 180) {
-    difference() {
-      qbCylinder(r=r, h=h, a=180);
-      rotate(a=[0, 0, a]) translate([-r-1, 0, -1]) cube([2*(r+1), (r+1), h+2]);
-    }
-  } else if (a == 180) {
+  difference() {
+    if (a < 180) {
+      difference() {
+        qbCylinder(r=r, h=h, a=180);
+        rotate(a=[0, 0, a]) translate([-r-1, 0, -1]) cube([2*(r+1), (r+1), h+2]);
+      }
+    } else if (a == 180) {
       difference() {
         qbCylinder(r=r, h=h);
         translate([-r-1, -r-1, -1]) cube([2*(r+1), (r+1), h+2]);
       }
-  } else if (a == 360) {
+    } else if (a == 360) {
       cylinder(r=r, h=h);
-  } else {
-    union() {
-      qbCylinder(r=r, h=h, a=180);
-      rotate(a=[0, 0, 180]) qbCylinder(r=r, h=h, a=a - 180);
+    } else {
+      union() {
+        qbCylinder(r=r, h=h, a=180);
+        rotate(a=[0, 0, 180]) qbCylinder(r=r, h=h, a=a - 180);
+      }
+    }
+
+    rT = firstDef(filletTopR, filletR);
+    if (rT != undef) {
+      translate([0, 0, h]) qbFilletCircle(circleR=r, filletR=rT);
+    }
+
+    rB = firstDef(filletBottomR, filletR);
+    if (rB != undef) {
+      rotate(a=[180, 0, 0]) qbFilletCircle(circleR=r, filletR=rB);
     }
   }
 }
@@ -46,4 +61,24 @@ module testMoreThanHalf() {
 
 module testFull() {
   qbCylinder(r=3, h=5, a=360);
+}
+
+module testFilletTopR() {
+  qbCylinder(r=5, h=7, filletTopR=2);
+}
+
+module testFilletBottomR() {
+  qbCylinder(r=5, h=7, filletBottomR=2);
+}
+
+module testFilletR() {
+  qbCylinder(r=5, h=7, filletR=2);
+}
+
+module testFilletRShort() {
+  qbCylinder(r=6, h=1, filletR=2.8);
+}
+
+module testFilletRAngle() {
+  qbCylinder(r=5, h=7, filletR=2, a=270);
 }

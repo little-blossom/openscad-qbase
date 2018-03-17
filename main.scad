@@ -2,6 +2,7 @@ include <functions.scad>
 
 include <qbFilletLine.scad>
 include <qbFilletRect.scad>
+include <qbFilletCircle.scad>
 
 include <qbCube.scad>
 
