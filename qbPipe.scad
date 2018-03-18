@@ -1,5 +1,14 @@
 use <qbCylinder.scad>
 
+/**
+ * Pipe (or slice of it).
+ *
+ * @param r1 Outer radius of the pipe.
+ * @param r2 Inner radius of the pipe.
+ * @param h Height of the pipe.
+ * @param a If less than 360, only the slice from `0` up to `a` degrees
+ *     is generated.
+ */
 module qbPipe(r1=2, r2=1, h=1, a=360) {
     difference() {
         qbCylinder(r=r1, h=h, a=a);

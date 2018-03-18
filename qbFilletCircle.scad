@@ -2,7 +2,12 @@ use <functions.scad>
 use <qbCube.scad>
 use <qbTorus.scad>
 
-// qbFilletCircle
+/**
+ * Solid to substract from cylinder to get fillets.
+ *
+ * @param circleR Radius of the cylinder.
+ * @param filletR Radius of the desired fillet.
+ */
 module qbFilletCircle(circleR=3, filletR=1) {
   translate([0, 0, -filletR])
     difference() {

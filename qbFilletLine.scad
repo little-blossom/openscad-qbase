@@ -1,10 +1,9 @@
-// qbFilletLine
-// rail to subtract from edges to get fillets.
-//
-// r - radius for the fillet
-// h - height of the edge to build the fillet rail for. The actual
-//     rail will be higher to avoid face-on-face issues.
-//
+/**
+ * Solid to substract from an edge to get a fillet.
+ *
+ * @param r Radius of the desired fillet.
+ * @param h Height of the edge to build the fillet for.
+ */
 module qbFilletLine(r, h) {
   difference() {
     translate([-1, -1, -1]) cube([r+1, r+1, h+2]);

@@ -1,6 +1,30 @@
 use <functions.scad>
 use <qbFilletRect.scad>
 
+/**
+ * Cube with optional fillets.
+ *
+ * @param size Size of the cube.
+ * @param filletFrontLeftR Radius of fillet for front left edge.
+ * @param filletFrontRightR Radius of fillet for front right edge.
+ * @param filletBackLeftR Radius of fillet for back left edge.
+ * @param filletBackRightR Radius of fillet for back right edge.
+ * @param filletBottomLeftR Radius of fillet for bottom left edge.
+ * @param filletBottomRightR Radius of fillet for bottom right edge.
+ * @param filletTopLeftR Radius of fillet for top left edge.
+ * @param filletTopRightR Radius of fillet for top right edge.
+ * @param filletBottomFrontR Radius of fillet for bottom front edge.
+ * @param filletTopFrontR Radius of fillet for top front edge.
+ * @param filletBottomBackR Radius of fillet for bottom back edge.
+ * @param filletTopBackR Radius of fillet for top back edge.
+ * @param filletFrontR Radius of fillets of edges around the cube's front.
+ * @param filletBackR Radius of fillets of edges around the cube's back.
+ * @param filletLeftR Radius of fillets of edges around the cube's left side.
+ * @param filletRightR Radius of fillets of edges around the cube's right side.
+ * @param filletTopR Radius of fillets of edges around the cube's top.
+ * @param filletBottomR Radius of fillets of edges around the cube's bottom.
+ * @param filletR Radius of fillets of all edges of the cube.
+ */
 module qbCube(size=[10, 10, 10],
   filletFrontLeftR=undef, filletFrontRightR=undef, filletBackLeftR=undef, filletBackRightR=undef,
   filletBottomLeftR=undef, filletBottomRightR=undef, filletTopLeftR=undef, filletTopRightR=undef,

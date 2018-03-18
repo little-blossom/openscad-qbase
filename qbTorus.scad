@@ -1,5 +1,14 @@
-// r1 -- radius of extruded circle
-// r2 -- radius of extrusion rotation
+/**
+ * Torus (or slice of it).
+ *
+ * This module can only generate non-intersecting tori. So `r1` has to be
+ * strictly smaller than `r2`.
+ *
+ * @param r1 Radius of the tube.
+ * @param r2 Distance from the center of the tube to the center of the torus.
+ * @param a If less than 360, only the torus slice from `0` up to `a` degrees
+ *     is generated.
+ */
 module qbTorus(r1=1, r2=2, a=360) {
   a = (a > 360) ? 360 : ((a < 0) ? 0 : a);
 

@@ -1,7 +1,16 @@
 use <functions.scad>
 use <qbFilletLine.scad>
 
-// qbFilletRect
+/**
+ * Solid to substract from a cube get a fillet along `Z`-edges.
+ *
+ * @param size The size of the cube to get fillets for.
+ * @param frontLeftR Radius of fillet for front left edge.
+ * @param frontRightR Radius of fillet for front right edge.
+ * @param backLeftR Radius of fillet for back left edge.
+ * @param backRightR Radius of fillet for back right edge.
+ * @param r Radius of fillets of all `Z`-edges of the cube.
+ */
 module qbFilletRect(size=[10, 10, 10], frontLeftR=undef, frontRightR=undef, backLeftR=undef, backRightR=undef, r=undef) {
     union() {
         rFL = firstDef(frontLeftR, r);

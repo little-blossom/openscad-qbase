@@ -1,6 +1,17 @@
 use <functions.scad>
 use <qbFilletCircle.scad>
 
+/**
+ * Cylinder (or slice of it) with optional fillets.
+ *
+ * @param r Radius of the cylinder.
+ * @param h Height of the cylinder.
+ * @param a If less than 360, only the cylinder slice from `0` up to `a` degrees
+ *     is generated.
+ * @param filletTopR Radius of fillet for cylinder's top.
+ * @param filletBottomR Radius of fillet for cylinder's bottom.
+ * @param filletR Radius of fillets for the tob and bottom of the cylinder.
+ */
 module qbCylinder(r=1, h=1, a = 360, filletTopR=undef, filletBottomR=undef, filletR=undef) {
   a = (a > 360) ? 360 : ((a < 0) ? 0 : a);
 

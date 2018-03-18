@@ -1,3 +1,8 @@
+/**
+ * Sphere.
+ *
+ * @param r  Radius of the sphere.
+ */
 module qbSphere(r=1) {
     sphere(r=r);
 };
