@@ -23,17 +23,17 @@ use </path/to/openscad-qbase/clone/main.scad>
 
 ### Main modules
 
-* `qbCube` - Cube with optional fillets
-* `qbCylinder` - Cylinder with optional fillets
-* `qbPipe` - Pipe
-* `qbSphere` - Sphere
-* `qbTorus` - Torus
+* `qbCube` - Cube with optional fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbCube))
+* `qbCylinder` - Cylinder with optional fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbCylinder))
+* `qbPipe` - Pipe ([details](https://little-blossom.github.io/openscad-qbase/generated/qbPipe))
+* `qbSphere` - Sphere ([details](https://little-blossom.github.io/openscad-qbase/generated/qbSphere))
+* `qbTorus` - Torus ([details](https://little-blossom.github.io/openscad-qbase/generated/qbTorus))
 
 ### Support modules
 
-* `qbFilletCircle` - Cut-off for cylinders to get fillets.
-* `qbFilletLine` - Cut-off for straight edges to get fillets.
-* `qbFilletRect` - Cut-off for four straight edges that are arranged in a rectangule.
+* `qbFilletCircle` - Cut-off for cylinders to get fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbFilletCircle))
+* `qbFilletLine` - Cut-off for straight edges to get fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbFilletLine))
+* `qbFilletRect` - Cut-off for four straight edges that are arranged in a rectangle ([details](https://little-blossom.github.io/openscad-qbase/generated/qbFilletRect))
 
 ## Questions/Support
 

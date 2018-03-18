@@ -15,3 +15,5 @@ script:
   - sh -e /etc/init.d/xvfb start
   - sleep 2 # Give xvfb some time to come up
   - ./test --verbose
+  - ./generate-docs --verbose
+  - if [ -n "$(git status --porcelain)" ] ; then echo "git repo status is not clean" ; git status ; git diff ; exit 1 ; fi

@@ -4,3 +4,6 @@
 [submodule "openscad-unit"]
 	path = openscad-unit
 	url = https://github.com/little-blossom/openscad-unit
+[submodule "openscad-doc"]
+	path = openscad-doc
+	url = https://github.com/little-blossom/openscad-doc
