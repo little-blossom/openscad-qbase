@@ -4,6 +4,20 @@ Source: [qbCylinder.scad](https://github.com/little-blossom/openscad-qbase/blob/
 
 Cylinder (or slice of it) with optional fillets.
 
+* [Description](#description)
+* [Arguments](#arguments)
+
+## Description
+
+
+Cylinder (or slice of it) with optional fillets.
+
+| [![summary-example](qbCylinder.scad-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCylinder.scad-media/summary-example.png) |
+| :---: |
+|Example 1: Sample cylinders [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCylinder.scad-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCylinder.scad-media/summary-example.scad)|
+
+
+
 ## Arguments
 
 <table>
@@ -15,9 +29,3 @@ Cylinder (or slice of it) with optional fillets.
 <tr><td>5</td><td><code>filletBottomR</code></td><td><code>undef</code></td><td>Radius of fillet for cylinder's bottom.</td></tr>
 <tr><td>6</td><td><code>filletR</code></td><td><code>undef</code></td><td>Radius of fillets for the tob and bottom of the cylinder.</td></tr>
 </table>
-
-## Description
-
-
-Cylinder (or slice of it) with optional fillets.
-

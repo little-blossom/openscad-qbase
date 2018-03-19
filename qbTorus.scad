@@ -1,6 +1,14 @@
 /**
  * Torus (or slice of it).
  *
+ * <openscad id="summary-example" caption="Sample tori">
+ * use <main.scad>
+ *
+ * qbTorus(r1=2, r2=4);
+ * translate([-7, -7, 0]) qbTorus(r1=1, r2=2, a=270);
+ * translate([7, -2, 0]) qbTorus(r1=1, r2=2, a=60, $fn=16);
+ * </openscad>
+ *
  * This module can only generate non-intersecting tori. So `r1` has to be
  * strictly smaller than `r2`.
  *

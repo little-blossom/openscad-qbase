@@ -1,6 +1,12 @@
 /**
  * Sphere.
  *
+ * <openscad id="summary-example" caption="Sample sphere">
+ * use <main.scad>
+ *
+ * qbSphere(r=5);
+ * </openscad>
+ *
  * @param r  Radius of the sphere.
  */
 module qbSphere(r=1) {

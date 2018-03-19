@@ -4,6 +4,20 @@ Source: [qbCube.scad](https://github.com/little-blossom/openscad-qbase/blob/mast
 
 Cube with optional fillets.
 
+* [Description](#description)
+* [Arguments](#arguments)
+
+## Description
+
+
+Cube with optional fillets.
+
+| [![summary-example](qbCube.scad-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.scad-media/summary-example.png) |
+| :---: |
+|Example 1: Sample cubes [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.scad-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.scad-media/summary-example.scad)|
+
+
+
 ## Arguments
 
 <table>
@@ -29,9 +43,3 @@ Cube with optional fillets.
 <tr><td>19</td><td><code>filletBottomR</code></td><td><code>undef</code></td><td>Radius of fillets of edges around the cube's bottom.</td></tr>
 <tr><td>20</td><td><code>filletR</code></td><td><code>undef</code></td><td>Radius of fillets of all edges of the cube.</td></tr>
 </table>
-
-## Description
-
-
-Cube with optional fillets.
-

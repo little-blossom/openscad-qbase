@@ -4,6 +4,16 @@ use <qbFilletRect.scad>
 /**
  * Cube with optional fillets.
  *
+ * <openscad id="summary-example" caption="Sample cubes">
+ * use <main.scad>
+ *
+ * qbCube([3, 4, 5]);
+ * translate([-8, -6, 0])
+ *   qbCube([6, 6, 5], filletR=1, $fn=20);
+ * translate([5, 3, 0])
+ *   qbCube([5, 5, 5], filletFrontLeftR=1, filletFrontRightR=1, filletBackRightR=3, $fn=16);
+ * </openscad>
+ *
  * @param size Size of the cube.
  * @param filletFrontLeftR Radius of fillet for front left edge.
  * @param filletFrontRightR Radius of fillet for front right edge.

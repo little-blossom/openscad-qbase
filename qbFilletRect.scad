@@ -4,6 +4,12 @@ use <qbFilletLine.scad>
 /**
  * Solid to substract from a cube get a fillet along `Z`-edges.
  *
+ * <openscad id="summary-example" caption="Sample rect fillets">
+ * use <main.scad>
+ *
+ * qbFilletRect([8, 6, 6], r=2, $fn=16);
+ * </openscad>
+ *
  * @param size The size of the cube to get fillets for.
  * @param frontLeftR Radius of fillet for front left edge.
  * @param frontRightR Radius of fillet for front right edge.

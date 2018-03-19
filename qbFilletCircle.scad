@@ -5,6 +5,12 @@ use <qbTorus.scad>
 /**
  * Solid to substract from cylinder to get fillets.
  *
+ * <openscad id="summary-example" caption="Sample circle fillets">
+ * use <main.scad>
+ *
+ * rotate([180, 0, 0]) qbFilletCircle(circleR=5, filletR=2);
+ * </openscad>
+ *
  * @param circleR Radius of the cylinder.
  * @param filletR Radius of the desired fillet.
  */

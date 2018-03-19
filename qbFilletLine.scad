@@ -1,6 +1,12 @@
 /**
  * Solid to substract from an edge to get a fillet.
  *
+ * <openscad id="summary-example" caption="Sample edge fillets">
+ * use <main.scad>
+ *
+ * rotate([0, 0, 270]) qbFilletLine(r=5, h=7);
+ * </openscad>
+ *
  * @param r Radius of the desired fillet.
  * @param h Height of the edge to build the fillet for.
  */

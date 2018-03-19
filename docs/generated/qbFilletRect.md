@@ -4,6 +4,20 @@ Source: [qbFilletRect.scad](https://github.com/little-blossom/openscad-qbase/blo
 
 Solid to substract from a cube get a fillet along `Z`-edges.
 
+* [Description](#description)
+* [Arguments](#arguments)
+
+## Description
+
+
+Solid to substract from a cube get a fillet along `Z`-edges.
+
+| [![summary-example](qbFilletRect.scad-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.scad-media/summary-example.png) |
+| :---: |
+|Example 1: Sample rect fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.scad-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletRect.scad-media/summary-example.scad)|
+
+
+
 ## Arguments
 
 <table>
@@ -15,9 +29,3 @@ Solid to substract from a cube get a fillet along `Z`-edges.
 <tr><td>5</td><td><code>backRightR</code></td><td><code>undef</code></td><td>Radius of fillet for back right edge.</td></tr>
 <tr><td>6</td><td><code>r</code></td><td><code>undef</code></td><td>Radius of fillets of all `Z`-edges of the cube.</td></tr>
 </table>
-
-## Description
-
-
-Solid to substract from a cube get a fillet along `Z`-edges.
-

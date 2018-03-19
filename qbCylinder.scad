@@ -4,6 +4,16 @@ use <qbFilletCircle.scad>
 /**
  * Cylinder (or slice of it) with optional fillets.
  *
+ * <openscad id="summary-example" caption="Sample cylinders">
+ * use <main.scad>
+ *
+ * qbCylinder(r=5, h=8);
+ * translate([-7, -6, 0])
+ *   qbCylinder(r=3, h=4, filletR=1, $fn=20);
+ * translate([9, -1, 0])
+ *   qbCylinder(r=1, h=5, filletTopR=0.4, $fn=16);
+ * </openscad>
+ *
  * @param r Radius of the cylinder.
  * @param h Height of the cylinder.
  * @param a If less than 360, only the cylinder slice from `0` up to `a` degrees
