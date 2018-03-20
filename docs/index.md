@@ -21,11 +21,11 @@ use </path/to/openscad-qbase/clone/main.scad>
 
 `openscad-qbase` provides the following main modules:
 
-* `qbCube` - Cube with optional fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbCube))
-* `qbCylinder` - Cylinder with optional fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbCylinder))
-* `qbPipe` - Pipe ([details](https://little-blossom.github.io/openscad-qbase/generated/qbPipe))
-* `qbSphere` - Sphere ([details](https://little-blossom.github.io/openscad-qbase/generated/qbSphere))
-* `qbTorus` - Torus ([details](https://little-blossom.github.io/openscad-qbase/generated/qbTorus))
+* [`qbCube`](https://little-blossom.github.io/openscad-qbase/generated/qbCube) - Cube with optional fillets
+* [`qbCylinder`](https://little-blossom.github.io/openscad-qbase/generated/qbCylinder) - Cylinder with optional fillets
+* [`qbPipe`](https://little-blossom.github.io/openscad-qbase/generated/qbPipe) - Pipe
+* [`qbSphere`](https://little-blossom.github.io/openscad-qbase/generated/qbSphere) - Sphere
+* [`qbTorus`](https://little-blossom.github.io/openscad-qbase/generated/qbTorus) - Torus
 
 An overview over all provided modules can be found in the [package overview](https://little-blossom.github.io/openscad-qbase/generated/overview)
 
