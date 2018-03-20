@@ -1,20 +1,22 @@
 # qbFilletRect
 
-Source: [qbFilletRect.scad](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletRect.scad) ([raw](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletRect.scad))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletRect.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletRect.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Solid to substract from a cube get a fillet along `Z`-edges.
 
 * [Description](#description)
 * [Arguments](#arguments)
+* [Examples](#examples)
+  * [Example 1: Sample rect fillets](#example-1-sample-rect-fillets)
 
 ## Description
 
 
 Solid to substract from a cube get a fillet along `Z`-edges.
 
-| [![summary-example](qbFilletRect.scad-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.scad-media/summary-example.png) |
+| [![summary-example](qbFilletRect.md-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.md-media/summary-example.png) |
 | :---: |
-|Example 1: Sample rect fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.scad-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletRect.scad-media/summary-example.scad)|
+|Example 1: Sample rect fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletRect.md-media/summary-example.scad)|
 
 
 
@@ -29,3 +31,22 @@ Solid to substract from a cube get a fillet along `Z`-edges.
 <tr><td>5</td><td><code>backRightR</code></td><td><code>undef</code></td><td>Radius of fillet for back right edge.</td></tr>
 <tr><td>6</td><td><code>r</code></td><td><code>undef</code></td><td>Radius of fillets of all `Z`-edges of the cube.</td></tr>
 </table>
+
+## Examples
+
+* [Example 1: Sample rect fillets](#example-1-sample-rect-fillets)
+
+### Example 1: Sample rect fillets
+
+
+```openscad
+use <main.scad>
+
+qbFilletRect([8, 6, 6], r=2, $fn=16);
+```
+| [![summary-example](qbFilletRect.md-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.md-media/summary-example.png) |
+| :---: |
+|Example 1: Sample rect fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletRect.md-media/summary-example.scad)|
+
+
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletRect.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletRect.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

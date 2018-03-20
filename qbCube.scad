@@ -14,6 +14,36 @@ use <qbFilletRect.scad>
  *   qbCube([5, 5, 5], filletFrontLeftR=1, filletFrontRightR=1, filletBackRightR=3, $fn=16);
  * </openscad>
  *
+ * <openscad caption="Plain cube" visible="false">
+ * use <main.scad>
+ *
+ * qbCube([7, 7, 7]);
+ * </openscad>
+ *
+ * <openscad caption="Cube with fillet on sides" visible="false">
+ * use <main.scad>
+ *
+ * qbCube([7, 7, 7], filletLeftR=1, filletRightR=2, $fn=16);
+ * </openscad>
+ *
+ * <openscad caption="Cube with fillet on edges" visible="false">
+ * use <main.scad>
+ *
+ * qbCube([7, 7, 7], filletFrontLeftR=2, filletTopFrontR=1, filletTopRightR=3, $fn=48);
+ * </openscad>
+ *
+ * <openscad caption="Cube with fillets on all edges" visible="false">
+ * use <main.scad>
+ *
+ * qbCube([7, 7, 7], filletR=2, $fn=32);
+ * </openscad>
+ *
+ * <openscad caption="Cube with overly big fillet on edge" visible="false">
+ * use <main.scad>
+ *
+ * qbCube([7, 7, 7], filletTopRightR=5, filletBottomLeftR=5, $fn=32);
+ * </openscad>
+ *
  * @param size Size of the cube.
  * @param filletFrontLeftR Radius of fillet for front left edge.
  * @param filletFrontRightR Radius of fillet for front right edge.

@@ -3,7 +3,7 @@ use <qbCylinder.scad>
 /**
  * Pipe (or slice of it).
  *
- * <openscad id="summary-example" caption="Sample tori">
+ * <openscad id="summary-example" caption="Sample pipes">
  * use <main.scad>
  *
  * qbPipe(r1=5, r2=3, h=7);
@@ -11,6 +11,18 @@ use <qbCylinder.scad>
  *   qbPipe(r1=4, r2=3, h=4, a=100);
  * translate([10, -2, 0])
  *   qbPipe(r1=3, r2=1, h=1, a=270, $fn=16);
+ * </openscad>
+ *
+ * <openscad caption="Plain pipe" visible="false">
+ * use <main.scad>
+ *
+ * qbPipe(r1=6, r2=2, h=7);
+ * </openscad>
+ *
+ * <openscad caption="Pipe slice" visible="false">
+ * use <main.scad>
+ *
+ * qbPipe(r1=6, r2=2, h=7, a=240);
  * </openscad>
  *
  * @param r1 Outer radius of the pipe.

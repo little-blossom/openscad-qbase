@@ -1,20 +1,27 @@
 # qbCube
 
-Source: [qbCube.scad](https://github.com/little-blossom/openscad-qbase/blob/master/qbCube.scad) ([raw](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbCube.scad))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbCube.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbCube.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Cube with optional fillets.
 
 * [Description](#description)
 * [Arguments](#arguments)
+* [Examples](#examples)
+  * [Example 1: Sample cubes](#example-1-sample-cubes)
+  * [Example 2: Plain cube](#example-2-plain-cube)
+  * [Example 3: Cube with fillet on sides](#example-3-cube-with-fillet-on-sides)
+  * [Example 4: Cube with fillet on edges](#example-4-cube-with-fillet-on-edges)
+  * [Example 5: Cube with fillets on all edges](#example-5-cube-with-fillets-on-all-edges)
+  * [Example 6: Cube with overly big fillet on edge](#example-6-cube-with-overly-big-fillet-on-edge)
 
 ## Description
 
 
 Cube with optional fillets.
 
-| [![summary-example](qbCube.scad-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.scad-media/summary-example.png) |
+| [![summary-example](qbCube.md-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/summary-example.png) |
 | :---: |
-|Example 1: Sample cubes [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.scad-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.scad-media/summary-example.scad)|
+|Example 1: Sample cubes [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/summary-example.scad)|
 
 
 
@@ -43,3 +50,96 @@ Cube with optional fillets.
 <tr><td>19</td><td><code>filletBottomR</code></td><td><code>undef</code></td><td>Radius of fillets of edges around the cube's bottom.</td></tr>
 <tr><td>20</td><td><code>filletR</code></td><td><code>undef</code></td><td>Radius of fillets of all edges of the cube.</td></tr>
 </table>
+
+## Examples
+
+* [Example 1: Sample cubes](#example-1-sample-cubes)
+* [Example 2: Plain cube](#example-2-plain-cube)
+* [Example 3: Cube with fillet on sides](#example-3-cube-with-fillet-on-sides)
+* [Example 4: Cube with fillet on edges](#example-4-cube-with-fillet-on-edges)
+* [Example 5: Cube with fillets on all edges](#example-5-cube-with-fillets-on-all-edges)
+* [Example 6: Cube with overly big fillet on edge](#example-6-cube-with-overly-big-fillet-on-edge)
+
+### Example 1: Sample cubes
+
+
+```openscad
+use <main.scad>
+
+qbCube([3, 4, 5]);
+translate([-8, -6, 0])
+  qbCube([6, 6, 5], filletR=1, $fn=20);
+translate([5, 3, 0])
+  qbCube([5, 5, 5], filletFrontLeftR=1, filletFrontRightR=1, filletBackRightR=3, $fn=16);
+```
+| [![summary-example](qbCube.md-media/summary-example.png "summary-example")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/summary-example.png) |
+| :---: |
+|Example 1: Sample cubes [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/summary-example.scad)|
+
+
+### Example 2: Plain cube
+
+
+```openscad
+use <main.scad>
+
+qbCube([7, 7, 7]);
+```
+| [![openscad-2](qbCube.md-media/openscad-2.png "openscad-2")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-2.png) |
+| :---: |
+|Example 2: Plain cube [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-2.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/openscad-2.scad)|
+
+
+### Example 3: Cube with fillet on sides
+
+
+```openscad
+use <main.scad>
+
+qbCube([7, 7, 7], filletLeftR=1, filletRightR=2, $fn=16);
+```
+| [![openscad-3](qbCube.md-media/openscad-3.png "openscad-3")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-3.png) |
+| :---: |
+|Example 3: Cube with fillet on sides [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-3.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/openscad-3.scad)|
+
+
+### Example 4: Cube with fillet on edges
+
+
+```openscad
+use <main.scad>
+
+qbCube([7, 7, 7], filletFrontLeftR=2, filletTopFrontR=1, filletTopRightR=3, $fn=48);
+```
+| [![openscad-4](qbCube.md-media/openscad-4.png "openscad-4")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-4.png) |
+| :---: |
+|Example 4: Cube with fillet on edges [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-4.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/openscad-4.scad)|
+
+
+### Example 5: Cube with fillets on all edges
+
+
+```openscad
+use <main.scad>
+
+qbCube([7, 7, 7], filletR=2, $fn=32);
+```
+| [![openscad-5](qbCube.md-media/openscad-5.png "openscad-5")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-5.png) |
+| :---: |
+|Example 5: Cube with fillets on all edges [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-5.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/openscad-5.scad)|
+
+
+### Example 6: Cube with overly big fillet on edge
+
+
+```openscad
+use <main.scad>
+
+qbCube([7, 7, 7], filletTopRightR=5, filletBottomLeftR=5, $fn=32);
+```
+| [![openscad-6](qbCube.md-media/openscad-6.png "openscad-6")](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-6.png) |
+| :---: |
+|Example 6: Cube with overly big fillet on edge [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCube.md-media/openscad-6.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCube.md-media/openscad-6.scad)|
+
+
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbCube.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbCube.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

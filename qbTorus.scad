@@ -12,6 +12,18 @@
  * This module can only generate non-intersecting tori. So `r1` has to be
  * strictly smaller than `r2`.
  *
+ * <openscad caption="Plain torus" visible="false">
+ * use <main.scad>
+ *
+ * qbTorus(r1=2, r2=4);
+ * </openscad>
+ *
+ * <openscad caption="Torus slice" visible="false">
+ * use <main.scad>
+ *
+ * qbTorus(r1=2, r2=4, a=240);
+ * </openscad>
+ *
  * @param r1 Radius of the tube.
  * @param r2 Distance from the center of the tube to the center of the torus.
  * @param a If less than 360, only the torus slice from `0` up to `a` degrees
