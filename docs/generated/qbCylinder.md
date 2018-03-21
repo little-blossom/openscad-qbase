@@ -1,6 +1,6 @@
 # qbCylinder
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbCylinder.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbCylinder.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbCylinder.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbCylinder.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Cylinder (or slice of it) with optional fillets.
 
@@ -113,4 +113,4 @@ qbCylinder(r=5, h=8, a=240, filletTopR=2, $fn=16);
 |Example 5: Cylinder slice with top fillet [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbCylinder.md-media/openscad-5.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbCylinder.md-media/openscad-5.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbCylinder.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbCylinder.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbCylinder.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbCylinder.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

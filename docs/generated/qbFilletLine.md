@@ -1,6 +1,6 @@
 # qbFilletLine
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletLine.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletLine.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbFilletLine.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbFilletLine.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Solid to substract from an edge to get a fillet.
 
@@ -45,4 +45,4 @@ rotate([0, 0, 270]) qbFilletLine(r=5, h=7);
 |Example 1: Sample edge fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletLine.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletLine.md-media/summary-example.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletLine.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletLine.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbFilletLine.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbFilletLine.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

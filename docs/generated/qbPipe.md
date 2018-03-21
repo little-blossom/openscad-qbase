@@ -1,6 +1,6 @@
 # qbPipe
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbPipe.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbPipe.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbPipe.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbPipe.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Pipe (or slice of it).
 
@@ -81,4 +81,4 @@ qbPipe(r1=6, r2=2, h=7, a=240);
 |Example 3: Pipe slice [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbPipe.md-media/openscad-3.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbPipe.md-media/openscad-3.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbPipe.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbPipe.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbPipe.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbPipe.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

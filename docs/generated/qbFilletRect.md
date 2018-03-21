@@ -1,6 +1,6 @@
 # qbFilletRect
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletRect.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletRect.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbFilletRect.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbFilletRect.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Solid to substract from a cube get a fillet along `Z`-edges.
 
@@ -49,4 +49,4 @@ qbFilletRect([8, 6, 6], r=2, $fn=16);
 |Example 1: Sample rect fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletRect.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletRect.md-media/summary-example.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletRect.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletRect.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbFilletRect.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbFilletRect.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

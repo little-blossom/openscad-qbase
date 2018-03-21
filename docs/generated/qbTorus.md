@@ -1,6 +1,6 @@
 # qbTorus
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbTorus.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbTorus.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbTorus.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbTorus.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Torus (or slice of it).
 
@@ -81,4 +81,4 @@ qbTorus(r1=2, r2=4, a=240);
 |Example 3: Torus slice [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbTorus.md-media/openscad-3.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbTorus.md-media/openscad-3.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbTorus.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbTorus.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbTorus.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbTorus.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

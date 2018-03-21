@@ -1,6 +1,6 @@
 # qbSphere
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Sphere.
 
@@ -44,4 +44,4 @@ qbSphere(r=5);
 |Example 1: Sample sphere [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbSphere.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbSphere.md-media/summary-example.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

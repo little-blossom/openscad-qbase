@@ -1,6 +1,6 @@
 # qbFilletCircle
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletCircle.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletCircle.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbFilletCircle.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbFilletCircle.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Solid to substract from cylinder to get fillets.
 
@@ -45,4 +45,4 @@ rotate([180, 0, 0]) qbFilletCircle(circleR=6, filletR=2);
 |Example 1: Sample circle fillets [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbFilletCircle.md-media/summary-example.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbFilletCircle.md-media/summary-example.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/qbFilletCircle.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/qbFilletCircle.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbFilletCircle.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbFilletCircle.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
