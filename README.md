@@ -19,9 +19,7 @@ use </path/to/openscad-qbase/clone/main.scad>
 
 ## Provided modules
 
-`openscad-qbase` provides the following modules
-
-### Main modules
+`openscad-qbase` provides the following main modules:
 
 * `qbCube` - Cube with optional fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbCube))
 * `qbCylinder` - Cylinder with optional fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbCylinder))
@@ -29,11 +27,7 @@ use </path/to/openscad-qbase/clone/main.scad>
 * `qbSphere` - Sphere ([details](https://little-blossom.github.io/openscad-qbase/generated/qbSphere))
 * `qbTorus` - Torus ([details](https://little-blossom.github.io/openscad-qbase/generated/qbTorus))
 
-### Support modules
-
-* `qbFilletCircle` - Cut-off for cylinders to get fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbFilletCircle))
-* `qbFilletLine` - Cut-off for straight edges to get fillets ([details](https://little-blossom.github.io/openscad-qbase/generated/qbFilletLine))
-* `qbFilletRect` - Cut-off for four straight edges that are arranged in a rectangle ([details](https://little-blossom.github.io/openscad-qbase/generated/qbFilletRect))
+An overview over all provided modules can be found in the [package overview](https://little-blossom.github.io/openscad-qbase/generated/overview)
 
 ## Questions/Support
 
