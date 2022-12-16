@@ -75,33 +75,36 @@ module qbCube(size=[10, 10, 10],
   difference() {
     cube(size);
 
-    qbFilletRect(
-      size=size,
-      frontLeftR=firstDef(filletFrontLeftR, filletFrontR, filletLeftR),
-      frontRightR=firstDef(filletFrontRightR, filletFrontR, filletRightR),
-      backLeftR=firstDef(filletBackLeftR, filletBackR, filletLeftR),
-      backRightR=firstDef(filletBackRightR, filletBackR, filletRightR),
-      r=filletR);
+    eFilletFrontLeftR = firstDef(filletFrontLeftR, filletFrontR, filletLeftR, filletR);
+    eFilletFrontRightR = firstDef(filletFrontRightR, filletFrontR, filletRightR, filletR);
+    eFilletBackLeftR = firstDef(filletBackLeftR, filletBackR, filletLeftR, filletR);
+    eFilletBackRightR = firstDef(filletBackRightR, filletBackR, filletRightR, filletR);
+
+    eFilletBottomLeftR=firstDef(filletBottomLeftR, filletLeftR, filletBottomR, filletR);
+    eFilletBottomRightR=firstDef(filletBottomRightR, filletRightR, filletBottomR, filletR);
+    eFilletTopLeftR=firstDef(filletTopLeftR, filletLeftR, filletTopR, filletR);
+    eFilletTopRightR=firstDef(filletTopRightR, filletRightR, filletTopR, filletR);
+
+    eFilletBottomFrontR=firstDef(filletBottomFrontR, filletFrontR, filletBottomR, filletR);
+    eFilletTopFrontR=firstDef(filletTopFrontR, filletFrontR, filletTopR, filletR);
+    eFilletBottomBackR=firstDef(filletBottomBackR, filletBackR, filletBottomR, filletR);
+    eFilletTopBackR=firstDef(filletTopBackR, filletBackR, filletTopR, filletR);
+
+    qbFilletRect(size=size,
+      frontLeftR=eFilletFrontLeftR, frontRightR=eFilletFrontRightR,
+      backLeftR=eFilletBackLeftR, backRightR=eFilletBackRightR);
 
     translate([0, size[1], 0])
       rotate(a=[90, 0, 0])
-      qbFilletRect(
-        size=[size[0], size[2], size[1]],
-        frontLeftR=firstDef(filletBottomLeftR, filletLeftR, filletBottomR),
-        frontRightR=firstDef(filletBottomRightR, filletRightR, filletBottomR),
-        backLeftR=firstDef(filletTopLeftR, filletLeftR, filletTopR),
-        backRightR=firstDef(filletTopRightR, filletRightR, filletTopR),
-        r=filletR);
+      qbFilletRect(size=[size[0], size[2], size[1]],
+        frontLeftR=eFilletBottomLeftR, frontRightR=eFilletBottomRightR,
+        backLeftR=eFilletTopLeftR, backRightR=eFilletTopRightR);
 
     translate([size[0], 0, 0])
       rotate(a=[0, -90, 0])
-      qbFilletRect(
-        size=[size[2], size[1], size[0]],
-        frontLeftR=firstDef(filletBottomFrontR, filletFrontR, filletBottomR),
-        frontRightR=firstDef(filletTopFrontR, filletFrontR, filletTopR),
-        backLeftR=firstDef(filletBottomBackR, filletBackR, filletBottomR),
-        backRightR=firstDef(filletTopBackR, filletBackR, filletTopR),
-        r=filletR);
+      qbFilletRect(size=[size[2], size[1], size[0]],
+        frontLeftR=eFilletBottomFrontR, frontRightR=eFilletTopFrontR,
+        backLeftR=eFilletBottomBackR, backRightR=eFilletTopBackR);
   }
 }
 
