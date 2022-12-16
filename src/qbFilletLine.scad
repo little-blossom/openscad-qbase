@@ -9,11 +9,13 @@
  *
  * @param r Radius of the desired fillet.
  * @param h Height of the edge to build the fillet for.
+ * @param overshootTop Extra height on top of `h`.
+ * @param overshootBottom Extra height below `0`.
  */
-module qbFilletLine(r, h) {
+module qbFilletLine(r=1, h=2, overshootTop=1, overshootBottom=1) {
   difference() {
-    translate([-1, -1, -1]) cube([r+1, r+1, h+2]);
-    translate([r, r, -2]) cylinder(r=r, h=h+4);
+    translate([-1, -1, -overshootBottom]) cube([r+1, r+1, h+overshootTop+overshootBottom]);
+    translate([r, r, -overshootBottom - 1]) cylinder(r=r, h=h+overshootTop+overshootBottom+2);
   }
 }
 
@@ -27,4 +29,16 @@ module testPlain() {
 
 module testFn() {
   qbFilletLine(r=3, h=4, $fn=20);
+}
+
+module testOvershootTop() {
+  qbFilletLine(r=3, h=4, overshootTop=3);
+}
+
+module testOvershootBottom() {
+  qbFilletLine(r=3, h=4, overshootBottom=2);
+}
+
+module testOvershootAll() {
+  qbFilletLine(r=3, h=4, overshootTop=3, overshootBottom=2);
 }
