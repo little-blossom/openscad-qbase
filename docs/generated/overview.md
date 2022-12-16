@@ -11,6 +11,7 @@ This package contains the following modules:
 | [`qbFilletCircle`](qbFilletCircle.md) | Solid to substract from cylinder to get fillets. |
 | [`qbFilletLine`](qbFilletLine.md) | Solid to substract from an edge to get a fillet. |
 | [`qbFilletRect`](qbFilletRect.md) | Solid to substract from a cube get a fillet along `Z`-edges. |
+| [`qbMirror`](qbMirror.md) | Mirror of children, while optionally copying them. |
 | [`qbPipe`](qbPipe.md) | Pipe (or slice of it). |
 | [`qbSphere`](qbSphere.md) | Sphere. |
 | [`qbTorus`](qbTorus.md) | Torus (or slice of it). |
