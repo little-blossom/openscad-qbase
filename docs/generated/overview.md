@@ -9,6 +9,7 @@ This package contains the following modules:
 | [`qbCube`](qbCube.md) | Cube with optional fillets. |
 | [`qbCylinder`](qbCylinder.md) | Cylinder (or slice of it) with optional fillets. |
 | [`qbFilletCircle`](qbFilletCircle.md) | Solid to substract from cylinder to get fillets. |
+| [`qbFilletCorner`](qbFilletCorner.md) | Solid to substract from an edge to get a fillet. |
 | [`qbFilletLine`](qbFilletLine.md) | Solid to substract from an edge to get a fillet. |
 | [`qbFilletRect`](qbFilletRect.md) | Solid to substract from a cube get a fillet along `Z`-edges. |
 | [`qbMirror`](qbMirror.md) | Mirror of children, while optionally copying them. |

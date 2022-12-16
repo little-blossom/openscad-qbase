@@ -5,6 +5,7 @@ include <qbMirror.scad>
 include <qbFilletLine.scad>
 include <qbFilletRect.scad>
 include <qbFilletCircle.scad>
+include <qbFilletCorner.scad>
 
 include <qbCube.scad>
 
