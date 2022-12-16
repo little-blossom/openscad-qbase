@@ -18,7 +18,7 @@ use <qbSphere.scad>
  * @param overshootFront Extra depth to the front.
  * @param overshootBottom Extra height below `0`.
  */
-module qbFilletCorner(r=1, bottomFrontR=undef, bottomLeftR=undef, frontLeftR, overshootLeft=1, overshootFront=1, overshootBottom=1) {
+module qbFilletCorner(r=1, bottomFrontR=undef, bottomLeftR=undef, frontLeftR=undef, overshootLeft=1, overshootFront=1, overshootBottom=1) {
   bfr = firstDef(bottomFrontR, r);
   blr = firstDef(bottomLeftR, r);
   flr = firstDef(frontLeftR, r);
