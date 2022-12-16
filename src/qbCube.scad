@@ -1,5 +1,7 @@
 use <functions.scad>
 use <qbFilletRect.scad>
+use <qbFilletCorner.scad>
+use <qbMirror.scad>
 
 /**
  * Cube with optional fillets.
@@ -90,21 +92,81 @@ module qbCube(size=[10, 10, 10],
     eFilletBottomBackR=firstDef(filletBottomBackR, filletBackR, filletBottomR, filletR);
     eFilletTopBackR=firstDef(filletTopBackR, filletBackR, filletTopR, filletR);
 
-    qbFilletRect(size=size,
-      frontLeftR=eFilletFrontLeftR, frontRightR=eFilletFrontRightR,
-      backLeftR=eFilletBackLeftR, backRightR=eFilletBackRightR);
+    // Fillet around X-axis
+    translate([size[0], 0, 0])
+      rotate(a=[0, -90, 0])
+      qbFilletRect(size=[size[2], size[1], size[0]],
+        frontLeftR=eFilletBottomFrontR, frontRightR=eFilletTopFrontR,
+        backLeftR=eFilletBottomBackR, backRightR=eFilletTopBackR);
 
+    // Fillet around Y-axis
     translate([0, size[1], 0])
       rotate(a=[90, 0, 0])
       qbFilletRect(size=[size[0], size[2], size[1]],
         frontLeftR=eFilletBottomLeftR, frontRightR=eFilletBottomRightR,
         backLeftR=eFilletTopLeftR, backRightR=eFilletTopRightR);
 
-    translate([size[0], 0, 0])
-      rotate(a=[0, -90, 0])
-      qbFilletRect(size=[size[2], size[1], size[0]],
-        frontLeftR=eFilletBottomFrontR, frontRightR=eFilletTopFrontR,
-        backLeftR=eFilletBottomBackR, backRightR=eFilletTopBackR);
+    // Fillet around Z-axis
+    qbFilletRect(size=size,
+      frontLeftR=eFilletFrontLeftR, frontRightR=eFilletFrontRightR,
+      backLeftR=eFilletBackLeftR, backRightR=eFilletBackRightR);
+
+
+    // Fillet bottom front left corner
+    if ((eFilletBottomFrontR > 0) && (eFilletBottomLeftR > 0) && (eFilletFrontLeftR > 0)) {
+      qbFilletCorner(bottomFrontR=eFilletBottomFrontR, bottomLeftR=eFilletBottomLeftR,
+        frontLeftR=eFilletFrontLeftR);
+    }
+
+    // Fillet bottom front right corner
+    if ((eFilletBottomFrontR > 0) && (eFilletBottomRightR > 0) && (eFilletFrontRightR > 0)) {
+      translate([size[0], 0, 0]) qbMirror([1, 0, 0])
+        qbFilletCorner(bottomFrontR=eFilletBottomFrontR, bottomLeftR=eFilletBottomRightR,
+          frontLeftR=eFilletFrontRightR);
+    }
+
+    // Fillet bottom back left corner
+    if ((eFilletBottomBackR > 0) && (eFilletBottomLeftR > 0) && (eFilletBackLeftR > 0)) {
+      translate([0, size[1], 0]) qbMirror([0, 1, 0])
+      qbFilletCorner(bottomFrontR=eFilletBottomBackR, bottomLeftR=eFilletBottomLeftR,
+        frontLeftR=eFilletBackLeftR);
+    }
+
+    // Fillet bottom back right corner
+    if ((eFilletBottomBackR > 0) && (eFilletBottomRightR > 0) && (eFilletBackRightR > 0)) {
+      translate([size[0], size[1], 0]) qbMirror([0, 1, 0]) qbMirror([1, 0, 0])
+        qbFilletCorner(bottomFrontR=eFilletBottomBackR, bottomLeftR=eFilletBottomRightR,
+          frontLeftR=eFilletBackRightR);
+    }
+
+    // Fillet top front left corner
+    if ((eFilletTopFrontR > 0) && (eFilletTopLeftR > 0) && (eFilletFrontLeftR > 0)) {
+      translate([0, 0, size[2]]) qbMirror([0, 0, 1])
+      qbFilletCorner(bottomFrontR=eFilletTopFrontR, bottomLeftR=eFilletTopLeftR,
+        frontLeftR=eFilletFrontLeftR);
+    }
+
+    // Fillet top front right corner
+    if ((eFilletTopFrontR > 0) && (eFilletTopRightR > 0) && (eFilletFrontRightR > 0)) {
+      translate([size[0], 0, size[2]]) qbMirror([0, 0, 1]) qbMirror([1, 0, 0])
+        qbFilletCorner(bottomFrontR=eFilletTopFrontR, bottomLeftR=eFilletTopRightR,
+          frontLeftR=eFilletFrontRightR);
+    }
+
+    // Fillet top back left corner
+    if ((eFilletTopBackR > 0) && (eFilletTopLeftR > 0) && (eFilletBackLeftR > 0)) {
+      translate([0, size[1], size[2]]) qbMirror([0, 0, 1]) qbMirror([0, 1, 0])
+      qbFilletCorner(bottomFrontR=eFilletTopBackR, bottomLeftR=eFilletTopLeftR,
+        frontLeftR=eFilletBackLeftR);
+    }
+
+    // Fillet top back right corner
+    if ((eFilletTopBackR > 0) && (eFilletTopRightR > 0) && (eFilletBackRightR > 0)) {
+      translate([size[0], size[1], size[2]]) qbMirror([0, 0, 1]) qbMirror([0, 1, 0]) qbMirror([1, 0, 0])
+        qbFilletCorner(bottomFrontR=eFilletTopBackR, bottomLeftR=eFilletTopRightR,
+          frontLeftR=eFilletBackRightR);
+    }
+
   }
 }
 
@@ -191,4 +253,51 @@ module testFilletBottom() {
 module testFilletR() {
   $fn=12;
   qbCube([7, 6, 5], filletR=1);
+}
+
+module testFilletBottomFrontLeft() {
+  $fn = 17;
+  rotate([-90, 0, 0])
+  qbCube([7, 6, 5], filletBottomFrontR=2, filletBottomLeftR=3, filletFrontLeftR=4);
+}
+
+module testFilletBottomFrontRight() {
+  $fn = 17;
+  rotate([-45, 0, 0])
+  qbCube([7, 6, 5], filletBottomFrontR=2, filletBottomRightR=3, filletFrontRightR=4);
+}
+
+module testFilletBottomBackLeft() {
+  $fn = 17;
+  rotate([0, 0, 90]) rotate([-180, 0, 0])
+  qbCube([7, 6, 5], filletBottomBackR=2, filletBottomLeftR=3, filletBackLeftR=4);
+}
+
+module testFilletBottomBackRight() {
+  $fn = 17;
+  rotate([-180, 0, 0])
+  qbCube([7, 6, 5], filletBottomBackR=2, filletBottomRightR=3, filletBackRightR=4);
+}
+
+module testFilletTopFrontLeft() {
+  $fn = 17;
+  rotate([0, 0, 45])
+  qbCube([7, 6, 5], filletTopFrontR=2, filletTopLeftR=3, filletFrontLeftR=4);
+}
+
+module testFilletTopFrontRight() {
+  $fn = 17;
+  qbCube([7, 6, 5], filletTopFrontR=2, filletTopRightR=3, filletFrontRightR=4);
+}
+
+module testFilletTopBackLeft() {
+  $fn = 17;
+  rotate([0, 0, -150])
+  qbCube([7, 6, 5], filletTopBackR=2, filletTopLeftR=3, filletBackLeftR=4);
+}
+
+module testFilletTopBackRight() {
+  $fn = 17;
+  rotate([0, 0, -135])
+  qbCube([7, 6, 5], filletTopBackR=2, filletTopRightR=3, filletBackRightR=4);
 }
