@@ -1,6 +1,6 @@
 # qbMirror
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/src/qbMirror.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/src/qbMirror.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbMirror.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbMirror.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Mirror of children, while optionally copying them.
 
@@ -81,4 +81,4 @@ qbMirror([1, 0, 0.3], copy=true) qbCube([7, 7, 7]);
 |Example 3: Mirror with copy [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbMirror.md-media/openscad-3.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbMirror.md-media/openscad-3.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/src/qbMirror.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/src/qbMirror.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbMirror.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbMirror.scad)) ([package overview](overview.md)) ([documentation home](../index.md))

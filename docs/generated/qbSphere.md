@@ -1,6 +1,6 @@
 # qbSphere
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/src/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/src/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
 
 Sphere.
 
@@ -79,4 +79,4 @@ qbSphere(r=5, rZ=3);
 |Example 3: Non-uniform sphere [(source)](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/qbSphere.md-media/openscad-3.scad)[(raw)](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/qbSphere.md-media/openscad-3.scad)|
 
 
-Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/docs/generated/src/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/docs/generated/src/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
+Links: ([source](https://github.com/little-blossom/openscad-qbase/blob/master/src/qbSphere.scad)) ([raw source](https://raw.githubusercontent.com/little-blossom/openscad-qbase/master/src/qbSphere.scad)) ([package overview](overview.md)) ([documentation home](../index.md))
