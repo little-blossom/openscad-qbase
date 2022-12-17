@@ -48,7 +48,10 @@ Cube with optional fillets.
 <tr><td>17</td><td><code>filletRightR</code></td><td><code>undef</code></td><td>Radius of fillets of edges around the cube's right side.</td></tr>
 <tr><td>18</td><td><code>filletTopR</code></td><td><code>undef</code></td><td>Radius of fillets of edges around the cube's top.</td></tr>
 <tr><td>19</td><td><code>filletBottomR</code></td><td><code>undef</code></td><td>Radius of fillets of edges around the cube's bottom.</td></tr>
-<tr><td>20</td><td><code>filletR</code></td><td><code>undef</code></td><td>Radius of fillets of all edges of the cube.</td></tr>
+<tr><td>20</td><td><code>filletXR</code></td><td><code>undef</code></td><td>Radius of fillets of edges parallel to X-axis.</td></tr>
+<tr><td>21</td><td><code>filletYR</code></td><td><code>undef</code></td><td>Radius of fillets of edges parallel to Y-axis.</td></tr>
+<tr><td>22</td><td><code>filletZR</code></td><td><code>undef</code></td><td>Radius of fillets of edges parallel to Z-axis.</td></tr>
+<tr><td>23</td><td><code>filletR</code></td><td><code>undef</code></td><td>Radius of fillets of all edges of the cube.</td></tr>
 </table>
 
 ## Examples

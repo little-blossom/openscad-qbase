@@ -65,6 +65,9 @@ use <qbMirror.scad>
  * @param filletRightR Radius of fillets of edges around the cube's right side.
  * @param filletTopR Radius of fillets of edges around the cube's top.
  * @param filletBottomR Radius of fillets of edges around the cube's bottom.
+ * @param filletXR Radius of fillets of edges parallel to X-axis.
+ * @param filletYR Radius of fillets of edges parallel to Y-axis.
+ * @param filletZR Radius of fillets of edges parallel to Z-axis.
  * @param filletR Radius of fillets of all edges of the cube.
  */
 module qbCube(size=[10, 10, 10],
@@ -72,25 +75,25 @@ module qbCube(size=[10, 10, 10],
   filletBottomLeftR=undef, filletBottomRightR=undef, filletTopLeftR=undef, filletTopRightR=undef,
   filletBottomFrontR=undef, filletTopFrontR=undef, filletBottomBackR=undef, filletTopBackR=undef,
   filletFrontR=undef, filletBackR=undef, filletLeftR=undef, filletRightR=undef,
-  filletTopR=undef, filletBottomR=undef, filletR=undef) {
+  filletTopR=undef, filletBottomR=undef, filletXR=undef,  filletYR=undef,  filletZR=undef, filletR=undef) {
 
   difference() {
     cube(size);
 
-    eFilletFrontLeftR = firstDef(filletFrontLeftR, filletFrontR, filletLeftR, filletR);
-    eFilletFrontRightR = firstDef(filletFrontRightR, filletFrontR, filletRightR, filletR);
-    eFilletBackLeftR = firstDef(filletBackLeftR, filletBackR, filletLeftR, filletR);
-    eFilletBackRightR = firstDef(filletBackRightR, filletBackR, filletRightR, filletR);
+    eFilletFrontLeftR = firstDef(filletFrontLeftR, filletFrontR, filletLeftR, filletZR, filletR);
+    eFilletFrontRightR = firstDef(filletFrontRightR, filletFrontR, filletRightR, filletZR, filletR);
+    eFilletBackLeftR = firstDef(filletBackLeftR, filletBackR, filletLeftR, filletZR, filletR);
+    eFilletBackRightR = firstDef(filletBackRightR, filletBackR, filletRightR, filletZR, filletR);
 
-    eFilletBottomLeftR=firstDef(filletBottomLeftR, filletLeftR, filletBottomR, filletR);
-    eFilletBottomRightR=firstDef(filletBottomRightR, filletRightR, filletBottomR, filletR);
-    eFilletTopLeftR=firstDef(filletTopLeftR, filletLeftR, filletTopR, filletR);
-    eFilletTopRightR=firstDef(filletTopRightR, filletRightR, filletTopR, filletR);
+    eFilletBottomLeftR=firstDef(filletBottomLeftR, filletLeftR, filletBottomR, filletYR, filletR);
+    eFilletBottomRightR=firstDef(filletBottomRightR, filletRightR, filletBottomR, filletYR, filletR);
+    eFilletTopLeftR=firstDef(filletTopLeftR, filletLeftR, filletTopR, filletYR, filletR);
+    eFilletTopRightR=firstDef(filletTopRightR, filletRightR, filletTopR, filletYR, filletR);
 
-    eFilletBottomFrontR=firstDef(filletBottomFrontR, filletFrontR, filletBottomR, filletR);
-    eFilletTopFrontR=firstDef(filletTopFrontR, filletFrontR, filletTopR, filletR);
-    eFilletBottomBackR=firstDef(filletBottomBackR, filletBackR, filletBottomR, filletR);
-    eFilletTopBackR=firstDef(filletTopBackR, filletBackR, filletTopR, filletR);
+    eFilletBottomFrontR=firstDef(filletBottomFrontR, filletFrontR, filletBottomR, filletXR, filletR);
+    eFilletTopFrontR=firstDef(filletTopFrontR, filletFrontR, filletTopR, filletXR, filletR);
+    eFilletBottomBackR=firstDef(filletBottomBackR, filletBackR, filletBottomR, filletXR, filletR);
+    eFilletTopBackR=firstDef(filletTopBackR, filletBackR, filletTopR, filletXR, filletR);
 
     // Fillet around X-axis
     translate([size[0], 0, 0])
@@ -300,4 +303,16 @@ module testFilletTopBackRight() {
   $fn = 17;
   rotate([0, 0, -135])
   qbCube([7, 6, 5], filletTopBackR=2, filletTopRightR=3, filletBackRightR=4);
+}
+
+module testFilletXR() {
+  qbCube([4, 5, 6], filletXR=1);
+}
+
+module testFilletYR() {
+  qbCube([4, 5, 6], filletYR=1);
+}
+
+module testFilletZR() {
+  qbCube([4, 5, 6], filletZR=1);
 }
