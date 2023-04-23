@@ -14,5 +14,6 @@ This package contains the following modules:
 | [`qbFilletRect`](qbFilletRect.md) | Solid to substract from a cube get a fillet along `Z`-edges. |
 | [`qbMirror`](qbMirror.md) | Mirror of children, while optionally copying them. |
 | [`qbPipe`](qbPipe.md) | Pipe (or slice of it). |
+| [`qbRotate`](qbRotate.md) | Rotate children around given point. |
 | [`qbSphere`](qbSphere.md) | Sphere. |
 | [`qbTorus`](qbTorus.md) | Torus (or slice of it). |

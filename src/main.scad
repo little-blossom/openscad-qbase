@@ -1,6 +1,7 @@
 include <functions.scad>
 
 include <qbMirror.scad>
+include <qbRotate.scad>
 
 include <qbFilletLine.scad>
 include <qbFilletRect.scad>
